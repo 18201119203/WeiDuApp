@@ -11,7 +11,7 @@ public class ProductModel implements ProductContract.IProductModel {
 
 
     @Override
-    public void getProductList(HashMap<String, String> params, final IProductCallback callback) {
+    public void getLoginList(HashMap<String, String> params, final IProductCallback callback) {
 
         OkHttpUtils.getInstance().doPost(Api.LOGIN_URL, params, new OkHttpCallback() {
             @Override

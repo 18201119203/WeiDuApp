@@ -21,7 +21,7 @@ public interface ProductContract {
     }
 
     interface IProductModel extends Basemodel {
-        void  getProductList(HashMap<String,String> params, ProductModel.IProductCallback callback);
+        void  getLoginList(HashMap<String,String> params, ProductModel.IProductCallback callback);
         void  getRegList(HashMap<String,String> params, ProductModel.IProductCallback callback);
     }
 

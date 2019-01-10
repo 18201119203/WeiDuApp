@@ -10,7 +10,14 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -29,8 +36,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    /*api 'com.umeng.sdk:common:latest.integration'
+    /*api 'com.umeng.sdk:common:latest.integration'8
     api 'com.umeng.sdk:analytics:latest.integration'*/
+    //友盟
+
 
     //okhttp
     api 'com.squareup.okhttp3:okhttp:3.12.1'
@@ -47,6 +56,13 @@ dependencies {
     //xrecyclerview
     implementation 'com.jcodecraeer:xrecyclerview:1.5.9'
     implementation project(path: ':lib_core')
+
+
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+
 }
 
 

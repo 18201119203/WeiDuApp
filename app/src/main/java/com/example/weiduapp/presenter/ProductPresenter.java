@@ -14,7 +14,7 @@ public class ProductPresenter extends ProductContract.ProductPresentervoid {
     @Override
     public void getProductList(HashMap<String, String> params) {
 
-        model.getProductList(params, new ProductModel.IProductCallback() {
+        model.getLoginList(params, new ProductModel.IProductCallback() {
             @Override
             public void failure(String msg) {
                 view.failure(msg);

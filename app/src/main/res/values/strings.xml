@@ -12,4 +12,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="sousuo">搜索</string>
+    <string name="sousuo_text">请输入您想要输搜索的商品</string>
+    <string name="fast_login">快速登陆</string>
+    <string name="hot">热量销售</string>
 </resources>
